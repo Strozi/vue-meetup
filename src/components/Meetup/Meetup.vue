@@ -4,16 +4,16 @@
       <v-flex xs12>
         <v-card>
           <v-card-title>
-            <h6 class="primary--text">My Meetup</h6>
+            <h6 class="primary--text">{{ meetup.id }}</h6>
           </v-card-title>
           <v-card-media
-            src="https://upload.wikimedia.org/wikipedia/commons/5/59/Programmer_writing_code_with_Unit_Tests.jpg"
+            v-bind:src="meetup.imageUrl"
             height="400px"
           >
           </v-card-media>
           <v-card-text>
             <div class="info--text">
-              !7th July 2017 - In our office.
+              {{ meetup.date }}
             </div>
             <div>
               Bacon ipsum dolor amet porchetta pastrami flank chuck andouille, turducken meatball chicken kevin corned beef pork chop sausage tri-tip prosciutto shoulder. Ground round ball tip flank bacon kielbasa. Meatloaf frankfurter filet mignon, bacon boudin cow kielbasa brisket flank venison doner short loin short ribs leberkas. Short ribs frankfurter salami biltong ball tip. Alcatra beef landjaeger biltong shank spare ribs ribeye. Chuck turducken meatball corned beef kielbasa picanha swine.
@@ -31,7 +31,12 @@
 
 <script>
 export default {
-
+  props: ['id'],
+  computed: {
+    meetup () {
+      return this.$store.getters.loadedMeetup(this.id)
+    }
+  }
 }
 </script>
 
