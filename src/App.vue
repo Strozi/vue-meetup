@@ -1,4 +1,4 @@
-<template>
+  <template>
   <v-app>
     <v-navigation-drawer v-model="sideNav" temporary>
       <v-list>

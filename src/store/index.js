@@ -9,21 +9,21 @@ export const store = new Vuex.Store({
       { imageUrl: 'https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg',
         id: 'ksdcvdsbnc2',
         title: 'Meetup in NY',
-        date: '2017-07-17',
+        date: new Date(),
         location: 'New Yoork',
         description: 'New York New York New New York'
       },
       { imageUrl: 'http://maxpixel.freegreatpicture.com/static/photo/1x/Urban-Japan-Architecture-Tokyo-Capital-Building-1424672.jpg',
         id: 'ksdcvdsbnc3',
         title: 'Meetup in Tokyo',
-        date: '2017-07-19',
+        date: new Date(),
         location: 'Tokyo',
         description: 'Fancy meetup in Tokyo'
       },
       { imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/59/Programmer_writing_code_with_Unit_Tests.jpg',
         id: 'ksdcvdsbnc4',
         title: 'Programmers Meetup',
-        date: '2017-09-23',
+        date: new Date(),
         location: 'Poznan',
         description: 'C0de code c0de Code '
       }
